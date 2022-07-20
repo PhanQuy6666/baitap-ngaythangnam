@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nhập bán kính hình tròn cần tính :</h1>
+    <input type="text" id="bankinh">
+    <input type="button" value="Tính chu vi" onclick="tinhchuvi()"></input>
+    <input type="button" value="Tính diện tích" name="" onclick="tinhdientich()"></input>
+    <script>
+        function tinhchuvi(){
+            var bankinh = document.getElementById("bankinh").value;
+            var chuvi = 2 * bankinh * 3.14;
+            alert(chuvi);
+
+        }
+        function tinhdientich(){
+            var bankinh = document.getElementById("bankinh").value;
+            var dientich = bankinh * bankinh * 3.14;
+            alert(dientich);
+        }
+    </script>
+    
+</body>
+</html>

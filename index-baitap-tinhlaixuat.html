@@ -19,11 +19,13 @@
     <h2 id="sotienphaitra"></h2>
     <script>
         function tinhlaixuat(){
-            var tiengui = document.getElementById("tiengui").value;
-            var namgui = document.getElementById("namgui").value;
-            var laixuat = document.getElementById("laixuat").value;
-            var tienlaixuat = laixuat/100 * tiengui * namgui;
-            var sotienphaitra = tiengui+tienlaixuat;
+            let tiengui = Number(document.getElementById("tiengui").value);
+            let namgui = Number(document.getElementById("namgui").value);        
+            let laixuat = Number(document.getElementById("laixuat").value);
+            let tienlaixuat = laixuat/100 * tiengui * namgui;
+            
+            let sotienphaitra = tiengui + tienlaixuat;
+            
             document.getElementById("tienlaixuat").innerHTML = "Số tiền lãi sau " + namgui + " năm gửi là:" + tienlaixuat;
             document.getElementById("sotienphaitra").innerHTML = " Sau " + namgui + " năm gửi thì cần phải trả cả gốc lẫn lãi là : " + sotienphaitra + " triệu đồng ";
         }

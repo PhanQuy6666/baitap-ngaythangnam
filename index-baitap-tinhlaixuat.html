@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nhập số tiền gửi :</h1>
+    <input type="text" id="tiengui">
+    <h1>Nhập số năm gửi :
+    </h1>
+    <input type="text" id="namgui">
+    <h1>Nhập lãi xuất (%/năm)</h1>
+    <input type="text" id="laixuat">
+    <input type="button" value="Tính lãi xuất" onclick="tinhlaixuat()">
+    <h2 id="tienlaixuat"></h2>
+    <h2 id="sotienphaitra"></h2>
+    <script>
+        function tinhlaixuat(){
+            var tiengui = document.getElementById("tiengui").value;
+            var namgui = document.getElementById("namgui").value;
+            var laixuat = document.getElementById("laixuat").value;
+            var tienlaixuat = laixuat/100 * tiengui * namgui;
+            var sotienphaitra = tiengui+tienlaixuat;
+            document.getElementById("tienlaixuat").innerHTML = "Số tiền lãi sau " + namgui + " năm gửi là:" + tienlaixuat;
+            document.getElementById("sotienphaitra").innerHTML = " Sau " + namgui + " năm gửi thì cần phải trả cả gốc lẫn lãi là : " + sotienphaitra + " triệu đồng ";
+        }
+    </script>
+</body>
+</html>

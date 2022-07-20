@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <table>
+        <tr>
+          <td><nav>Tên nguuời nhận :</nav></td>
+          <td><input type="text" id="name" value="Joe"/></td>
+        </tr>
+        <tr>
+          <td><nav>Địa điểm :</nav></td>
+          <td><input type="text" id="address" value="Los Angeles"/></td>
+        </tr>
+        <tr>
+          <td><nav>Thời gian :</nav></td>
+        </tr>
+        <tr>
+          <td><nav>Ngày:</nav></td>
+          <td><input type="text" name="day" id="day" value="10"/></td>
+          <td><nav>Tháng :</nav></td>
+          <td><input type="text" name="month" id="month" value="10"/></td>
+          <td><nav>Năm :</nav></td>
+          <td>
+            <input type="text" name="ye" id="year" value="1951"/>
+          </td>
+        </tr>
+      </table>
+      <input type="button" value="Xác nhận" onclick="check()" />
+    </form>
+    <div id="content"></div>
+    <script>
+              function check() {
+                var name = document.getElementById("name").value;
+                var address = document.getElementById("address").value;
+                var day = document.getElementById("day").value;
+                var month = document.getElementById("month").value;
+                var year = document.getElementById("year").value;
+                var content=document.getElementById("content")
+                var is_correct_name = name === "Joe";
+                var is_correct_address = address === "Los Angeles";
+                var is_correct_day = day == 10;
+                var is_correct_month = month == 10;
+                var is_correct_year = year == 1951;
+                var message=`Joe thương nhớ \n
+                Em không biết phải nói sao để anh hiểu rằng, em nhớ anh thật nhiều. Em yêu anh đến khi trái tim này tan thành nghìn mảnh. Tất cả những gì em yêu thương, em khát khao và cần đến, chính là anh, mãi mãi về sau. Em chỉ muốn ở bên anh, và anh yêu hỡi, em sẽ trở thành người phụ nữ như anh mong muốn.
+
+      Có phải em thật tệ hại, khi cứ nghĩ đến anh thật nhiều, thật lâu và nhất là mỗi khi đêm xuống? Em hứa sẽ sẽ cố gắng triệu triệu lần hơn thế. Nhưng hơn tất cả, em chỉ mong một ngày nào đó, anh sẽ tự hào về em, như tự hào về vợ của anh, và mẹ của các con anh (ít nhất là 2 nhé, em vừa mới quyết định đấy!). Em nhớ thật nhiều cảm giác mỗi đêm anh ôm em và ru em ngủ trong vòng tay. Đêm nay, em chỉ muốn được gần bên anh… và anh biết không, trái tim em đang đau đớn đến nhường nào.
+
+      Anh yêu thương, đừng bao giờ rời xa em nữa nhé. Yêu anh rất nhiều.
+
+      Los Angeles, ngày 10 tháng 10 năm 1951.`
+                if(is_correct_name&&is_correct_address&&is_correct_day&&is_correct_month&&is_correct_year){
+                  content.innerText=message;
+                }
+            }
+    </script>
+  </body>
+</html>

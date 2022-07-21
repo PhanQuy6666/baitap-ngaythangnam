@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mời nhận số: </h1>
+    <input type="text" value="6" id="x">
+    <input type="button" value="OK" onclick="check()" >
+    <p id="result"></p>
+    <script>
+        function check(){
+            var x = Number(document.getElementById("x").value);
+            var y = x % 2;
+            var is_correct_c = y == 0;
+            var is_correct_l = y == 1;
+            if(is_correct_c){
+                document.getElementById("result").innerHTML = x + " là số chẵn";
+            }
+            else{
+                document.getElementById("result").innerHTML = x + " là số lẻ";
+            }
+        }
+    </script>
+</body>
+</html>

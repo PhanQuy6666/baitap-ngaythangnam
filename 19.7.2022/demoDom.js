@@ -7,8 +7,9 @@
 // const p3 = document.createElement("p");
 // p3.innerText = "Phan trọng Quý";
  var intro = "Tam Biet";
+ let $name=1
  document.getElementById("intro").innerHTML = intro;
- function myFunction(){
+ /*function myFunction(){
     document.getElementById("demo").innerHTML = "Paragraph changed";
 
- }
+ }*/
